@@ -33,7 +33,7 @@
 		<div class="col-md-3" style="font-size: 25px;">ProjectHub</div>
 		<div class="col-md-6"></div>
 		<div class="col-md-2"><button id="add-project-click">Add Project</button></div>
-		<div class="col-md-1"><a href="http://localhost/ProjectHub-master/index.php?id=0"><button style="color: white">Logout</button></a></div>
+		<div class="col-md-1"><a href="logout.php"><button style="color: white">Logout</button></a></div>
 
 	</div>
 </div>
@@ -42,28 +42,25 @@
 		<div id="interest">
 			<div class="row" id="wd" ><a href="http://localhost/ProjectHub-master/landing.php?id=1">Web designing</a></div>
 			<div class="row" id="cc" ><a href="http://localhost/ProjectHub-master/landing.php?id=2">Cloud Computing</a></div>
-			<div class="row" id=""><a href="http://localhost/ProjectHub-master/landing.php?id=3">Big Data</a></div>
-			<div class="row" id=""><a href="http://localhost/ProjectHub-master/landing.php?id=4">Machine learning</a></div>
-			<div class="row" id=""><a href="http://localhost/ProjectHub-master/landing.php?id=5">Android</a></div>
-			<div class="row" id=""><a href="http://localhost/ProjectHub-master/landing.php?id=6">iOS Development</a></div>
-			<div class="row" id=""><a href="http://localhost/ProjectHub-master/landing.php?id=7">Matlab</a></div>
-			<div class="row" id=""><a href="http://localhost/ProjectHub-master/landing.php?id=8">Image Processing</a></div>
-			<div class="row" id=""><a href="http://localhost/ProjectHub-master/landing.php?id=9">Cryptography</a></div>
-			<div class="row" id=""><a href="http://localhost/ProjectHub-master/landing.php?id=10">Technical Papers</a></div>
-			<div class="row" id=""><a href="http://localhost/ProjectHub-master/landing.php?id=11">Aptitude</a></div>
-			<div class="row" id=""><a href="http://localhost/ProjectHub-master/landing.php?id=12">Java</a></div>
-			<div class="row" id=""><a href="http://localhost/ProjectHub-master/landing.php?id=13">C++</a></div>
-			<div class="row" id=""><a href="http://localhost/ProjectHub-master/landing.php?id=14">C</a></div>
-			<div class="row" id=""><a href="http://localhost/ProjectHub-master/landing.php?id=15">Python</a></div>
-			<div class="row" id=""><a href="http://localhost/ProjectHub-master/landing.php?id=16">PHP</a></div>
-			<div class="row" id=""><a href="http://localhost/ProjectHub-master/landing.php?id=17">JavaScript</a></div>
-			<div class="row" id=""><a href="http://localhost/ProjectHub-master/landing.php?id=18">IOT</a></div>
+			<div class="row" id=""><a>Big Data</a></div>
+			<div class="row" id=""><a>Machine learning</a></div>
+			<div class="row" id=""><a>Android</a></div>
+			<div class="row" id=""><a>iOS Development</a></div>
+			<div class="row" id=""><a>Matlab</a></div>
+			<div class="row" id=""><a>Image Processing</a></div>
+			<div class="row" id=""><a>Cryptography</a></div>
+			<div class="row" id=""><a>Technical Papers</a></div>
+			<div class="row" id=""><a>Aptitude</a></div>
+			<div class="row" id=""><a>Java</a></div>
+			<div class="row" id=""><a>C++</a></div>
+			<div class="row" id=""><a>C</a></div>
+			<div class="row" id=""><a>Python</a></div>
+			<div class="row" id=""><a>PHP</a></div>
+			<div class="row" id=""><a>JavaScript</a></div>
 		</div>
-	</div>
-	<div class="col-md-5" id="posts">
 		<?php
 		$txt=$_GET["id"];
-		$sql = "SELECT * FROM project where category_id='".$txt."'" ;
+		$sql = "SELECT * FROM project where Project_id='".$txt."'" ;
         $result = $conn->query($sql);
       //  $row=mysqli_fetch_row($result);
 		$index = 0;
@@ -71,11 +68,11 @@
 	{
 		$index = $index + 1;
 		?>
-	
-	
+	</div>
+	<div class="col-md-4" id="posts">
 		<a><div id="post1" >	
 			<div class="row">
-				<div class="col-md-9 protitle" id="pro-title">Project Title:<?php echo $row["project_title"];?></div>
+				<div class="col-md-10 protitle" id="pro-title">Project Title:<?php echo $row["project_title"];?></div>
 				<div class="col-md-1" id="pro-status">Status:<?php echo $row["status"];?></div>
 			</div><hr>
 			<div class="row description" id="pro-desc">
@@ -128,34 +125,13 @@
 	 ?> 
 	</div>
 
-	<div class="col-md-5" id="full_details">
+	<div class="col-md-6" id="full_details">
 		<div id="add-project">
 			<center><h2>Wow! Tell Us About Your Project</h2></center><br>
-			<form action="http://localhost/ProjectHub-master/createPost.php" method="POST">
+			<form action="createPost.php" method="POST">
 				<input type="text" name="project-title" placeholder="Project Title" required><br><Br>
 				<input type="date" name="start-date" placeholder="When did you start?" required><br><Br>
-				<!-- <input type="text" name="project-topic" placeholder="Project Topic" required><br><Br> -->
-				<select name="project-topic">
-    				<option value=1>Web designing</option>
-    				<option value=2>Cloud Computing</option>
-    				<option value=3>Big Data</option>
-    				<option value=4>Machine Learning</option>
-    				<option value=5>Android</option>
-    				<option value=6>IOS Development</option>
-    				<option value=7>Matlab</option>
-    				<option value=8>Image Processing</option>
-    				<option value=9>Cryptography</option>
-    				<option value=10>Technical Papers</option>
-    				<option value=11>Aptitude</option>
-    				<option value=12>Java</option>
-    				<option value=13>C++</option>
-    				<option value=14>C</option>
-    				<option value=15>Python</option>
-    				<option value=16>PHP</option>
-    				<option value=17>Javascript</option>
-    				<option value=18>IOT</option>
-  				</select><br><Br>
-
+				<input type="text" name="project-topic" placeholder="Project Topic" required><br><Br>
 				<textarea name="project-description" placeholder="Project Description" required class="inputclass3"></textarea><br><Br>
 				<div class="row">
 					<div class="col-md-6">

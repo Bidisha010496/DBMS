@@ -16,26 +16,26 @@
 	   if ($email_login && $password_login) {
             $conn = new mysqli('localhost',$user,$pass,$dbname) or die("Connection failed");
 
-            $sql = "SELECT * FROM user WHERE '".$email_login."' = email";
+            $sql = "SELECT * FROM user WHERE email='".$email_login."' ";
             $result = $conn->query($sql);
-            $row=mysqli_fetch_assoc($result);
+            $row=mysqli_fetch_array($result);
             if($row)
             {
                 $password=$row["password"];
-                $_SESSION['id'] = $row["id"];
+                $_SESSION["unid"] = $row["user_id"];
             }
             
             if($password==$password_login)
             {
                 //echo "correct password";
-                redirect('http://localhost/ProjectHub-master/landing.php');
+                redirect('http://localhost/ProjectHub-master/landing.php?id=1');
                  
              
 
             }
             else{
-                 echo "<h1>Incorrect Password</h1>"; 
-                 redirect('index.html?id=1');
+              //   echo "<h1>Incorrect Password</h1>"; 
+                 redirect("http://localhost/ProjectHub-master/index.php?id=1");
               
              }
            

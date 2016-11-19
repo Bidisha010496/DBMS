@@ -18,7 +18,7 @@
 <div>
 					<?php
 					$id=$_GET["id"];
-					if($id===1)
+					if($id==1)
 					echo "<h1>Incorrect Username or Password</h1>";
 					?>
 	<div class="col-md-6"><center>

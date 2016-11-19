@@ -17,14 +17,17 @@
 	{
 		die("Connection failed:".$conn->connect_error);
 	}
-	$UniId = $_SESSION['id'];
+
+	$UniId = $_SESSION["unid"];
+	//$id=$_GET["id"];
 	$proTitles=$_REQUEST["project-title"];
 	$cat=$_REQUEST["project-topic"];
 	$des=$_REQUEST["project-description"];
 	$run=$_REQUEST["project-status"];
-
-	$sql="INSERT INTO project VALUES('?','".$UniId."','".$proTitles."','".$cat."','".$des."','".$run."')";
+	$date=$_REQUEST["start-date"];
+	$sql="INSERT INTO project VALUES('?','".$UniId."','".$proTitles."','".$run."','".$date."','".$cat."','".$des."')";
 	$result = $conn->query($sql);
-	redirect('landing.php');
+	//echo "abc";
+	redirect('http://localhost/ProjectHub-Master/landing.php?id=1');
 	$conn->close();
 ?>
