@@ -88,7 +88,7 @@
 }
 .signup-div-back:hover{
     width: 500px;
-    height: 490px;
+    height: 590px;
     opacity: .85;
     border-radius: 15px;
 } 
@@ -154,14 +154,14 @@ input,select,.inputclass3{
 }
 #post1
 {
-	background-color: #f0f8ff;
-    padding: 20px;
-    margin-bottom: 1px;
+	background-color:#f0f8ff;
+    padding: 40px;
+    margin-bottom: 5px;
 }
 #posts{
 	margin-left: -15px;
 	overflow: auto;
-	height: 619px;
+	height: 700px;
 }
 .protitle{
 	font-size: 16px;
@@ -173,7 +173,7 @@ input,select,.inputclass3{
 	padding: 20px;
 }
 button{
-	background-color: #008686;
+	background-color:#008686;
 	padding: 5px;
 	border-color: white;
 	border-radius: 5px;
