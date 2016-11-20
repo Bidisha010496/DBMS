@@ -25,7 +25,7 @@
 	$des=$_REQUEST["project-description"];
 	$run=$_REQUEST["project-status"];
 	$date=$_REQUEST["start-date"];
-	$sql="INSERT INTO project VALUES('?','".$UniId."','".$proTitles."','".$run."','".$date."','".$cat."','".$des."')";
+	$sql="INSERT INTO project VALUES('?','".$UniId."','".$proTitles."','".$run."','".$date."','".$cat."','".$des."',1)";
 	$result = $conn->query($sql);
 	//echo "abc";
 	redirect('http://localhost/ProjectHub-Master/landing.php?id=1');

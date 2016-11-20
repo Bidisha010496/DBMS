@@ -35,7 +35,7 @@ hey
             $row=mysqli_fetch_assoc($result);
             echo $row["id"];
             echo "Happy";*/
-            echo "Happy";
+           // echo "Happy";
 ?>
 
 
