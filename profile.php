@@ -50,7 +50,9 @@ function redirect($url, $statusCode = 303)
 		   
 	.profilepic {
 	position: absolute;
-	}
+	margin-top: 205;
+	margin-left:20;
+}
 		  
     .details {
 	position: absolute;
@@ -104,6 +106,7 @@ function redirect($url, $statusCode = 303)
 	</div>
 
 	<div class="col-md-4 ">
+		<div class="profilepic">
 		<form action="profile-change">
 		 <a href="php code to take input">
 		  <img src="defimage.png" class="img-circle" alt="defimage.png" height="150" width="150" >
@@ -111,6 +114,7 @@ function redirect($url, $statusCode = 303)
           <p><strong><br>Change Profile picture</strong></p>
           
 		</form>
+		</div>
 	</div>
 
 </div>

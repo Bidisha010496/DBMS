@@ -43,17 +43,25 @@ table {
 td, th {
     border: 1px solid #dddddd;
     text-align: left;
-    padding: 8px;
+    padding: 18px;
+}
+th{
+  text-align: center;
 }
 
 tr:nth-child(even) {
     background-color: #dddddd;
 }
+td{
+  font-size: 18px;
+  text-align: center;
+}
 </style>
 </head>
-<body>
-<div class="col-md-9">
-<table>
+<body style="background-color: lightblue;">
+<div class="row text-center"><h2>Request Page</h2></div>
+<div class="row" style="padding: 20px;">
+<table >
 <div class="col-names">
   <tr>
     <div class ="col-md-1">
@@ -121,7 +129,7 @@ tr:nth-child(even) {
   
 </table>
 </div>
-<button style="background-color: #E7F4EB;margin-top:400px;margin-right:200px;"><a href="http://localhost/ProjectHub-Master/landing.php?id=1">Go to HomePage </a></button>
+<button style="margin-top:400px;margin-right:1200px;padding: 10px; width: 20%;" class="btn btn-primary"><a href="http://localhost/ProjectHub-Master/landing.php?id=1" style="color: white; font-size: 18px;">Go To Home Page </a></button>
 
 </body>
 </html>

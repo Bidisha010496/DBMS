@@ -20,7 +20,7 @@
             $result = $conn->query($sql);
             
     }
-    elseif (isset($_POST['Delete'])) {
+    elseif (isset($_POST['Decline'])) {
         $sql = "Delete from request where request_id='".$del."'";
             $result = $conn->query($sql);
        

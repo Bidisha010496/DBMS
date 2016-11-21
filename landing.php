@@ -98,13 +98,13 @@
 		</div><br><hr>
 			<!-- <button type="button" data-toggle="modal" data-target="#myModal" name="button">Request Joining</button><br><br> -->
 			<div class="col-md-8">
-			Developer's Count:<?php echo $row["no_of_people"];?>
+			Developer's Count:<?php echo $row["no_of_people"];?><br>
 			</div>
 			<div class="col-md-4">
 			<form action="http://localhost/ProjectHub-master/sendRequest.php" method="GET">
 			<input type="hidden" name="ReqId" value=<?php echo $row["user_id"] ?> >
 			<input type="hidden" name="ProjId" value=<?php echo $row["Project_id"] ?> >
-			<button type=submit id="Rbutton">Request Joining</button>
+			<button type=submit id="Rbutton">Request To Join</button>
 			</form>
 			</div>
 
@@ -174,6 +174,24 @@
 				<input type="submit" value="Inspire The World With This Project">
 
 			</form>
+			<!-- <div class="modal fade" id="myModal" role="dialog">
+	  	     		<div class="modal-dialog">
+	      				<div class="modal-content">
+	        				<div class="modal-header">
+	          					<button type="button" class="close" data-dismiss="modal">&times;</button>
+	          					<h4 class="modal-title">Confirmation Box</h4>
+	        				</div>
+	        				<div class="modal-body">
+	          					<p>Successful</p>
+	        				</div>
+	        				<div class="modal-footer">
+	        				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        				<form action="http://localhost/ProjectHub-master/sendRequest.php" > <button type="submit" id="req-update">OK </button></form>
+	        				</div>
+	      				</div>
+	      			</div>
+				</div>  -->
+	
 		</div>
 		<div id="project-full-descp">
 			<div class="row">
